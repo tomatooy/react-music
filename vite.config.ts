@@ -21,7 +21,7 @@ export default defineConfig({
   },
   build: {
     rollupOptions: {
-      external: ['Aplayer']
+      external: ['APlayer']
     }
   }
 })
