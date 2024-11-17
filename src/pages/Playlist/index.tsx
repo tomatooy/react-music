@@ -30,7 +30,7 @@ const Playlist: React.FC = () => {
 
   return (
     <>
-      <MyPlaylist playlists={playlistData.playlists} />
+      <MyPlaylist playlist={playlistData.playlist} />
     </>
   )
 }

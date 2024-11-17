@@ -3,7 +3,7 @@ import CoverImage from '@/components/CoverImage'
 import SvgIcon from '@/components/SvgIcon'
 import { useNavigate } from 'react-router-dom'
 
-const MyPlaylist: React.FC<PlayListDetails> = ({ playlists }) => {
+const MyPlaylist: React.FC<PlayListDetails> = ({ playlist }) => {
   const navigate = useNavigate()
   const navigateToPlaylistDetails = (playlistId: number) => {
     navigate('/playlistDetails', { state: { playlistId } })
@@ -15,7 +15,7 @@ const MyPlaylist: React.FC<PlayListDetails> = ({ playlists }) => {
         <SvgIcon className="w-6 h-6" name="chevron-right"></SvgIcon>
       </div>
       <div className="grid grid-cols-1 gap-20 sm:grid-cols-4">
-        {playlists.map((item) => {
+        {playlist.map((item) => {
           return (
             <div
               className="w-full h-auto cursor-pointer"

@@ -1,6 +1,6 @@
 import { useNavigate } from 'react-router-dom'
 import CoverImage from '@/components/CoverImage'
-import { PlayListDetail, Tag } from '@/api/playlist/type'
+import { Tag, TopPlaylist } from '@/api/playlist/type'
 import { useEffect, useState } from 'react'
 import { useTopPlaylist } from '@/api/playlist'
 import { extractBaseUrl } from '@/utils/url'
@@ -15,9 +15,7 @@ const Category: React.FC<Props> = ({ name }) => {
   const navigateToPlaylist = (id: number) => {
     navigate('/playlistDetails', { state: { playlistId: id } })
   }
-  const [playlistData, setPlaylistData] = useState<PlayListDetail[] | null>(
-    null
-  )
+  const [playlistData, setPlaylistData] = useState<TopPlaylist[] | null>(null)
 
   useEffect(() => {
     const fetch = async () => {
