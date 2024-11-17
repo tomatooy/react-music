@@ -225,7 +225,7 @@ export interface PlayListTrackAll {
 }
 
 export interface PlayListDetails {
-  playlists: PlayListDetail[]
+  playlist: PlayListDetail[]
 }
 
 export interface PlayListDetailInfo {
@@ -261,4 +261,130 @@ export interface PlaylistTag {
   highQuality: number
   highQualityPos: number
   officialPos: number
+}
+
+export interface TopPlaylistResult {
+  playlists: TopPlaylist[]
+  total: number
+  code: number
+  more: boolean
+  cat: string
+}
+
+export interface TopPlaylist {
+  name: string
+  id: number
+  trackNumberUpdateTime: number
+  status: number
+  userId: number
+  createTime: number
+  updateTime: number
+  subscribedCount: number
+  trackCount: number
+  cloudTrackCount: number
+  coverImgUrl: string
+  iconImgUrl: unknown
+  coverImgId: number
+  description: string
+  tags: unknown[]
+  playCount: number
+  trackUpdateTime: number
+  specialType: number
+  totalDuration: number
+  creator: Creator
+  tracks: unknown[]
+  subscribers: Subscriber[]
+  subscribed: unknown
+  commentThreadId: string
+  newImported: boolean
+  adType: number
+  highQuality: boolean
+  privacy: number
+  ordered: boolean
+  anonimous: boolean
+  coverStatus: number
+  recommendInfo: unknown
+  socialPlaylistCover: unknown
+  recommendText: unknown
+  coverText: string[]
+  relateResType: string
+  relateResId: unknown
+  tsSongCount: number
+  algType?: string
+  shareCount: number
+  coverImgId_str: string
+  alg: string
+  commentCount: number
+}
+
+export interface Creator {
+  defaultAvatar: boolean
+  province: number
+  authStatus: number
+  followed: boolean
+  avatarUrl: string
+  accountStatus: number
+  gender: number
+  city: number
+  birthday: number
+  userId: number
+  userType: number
+  nickname: string
+  signature: string
+  description: string
+  detailDescription: string
+  avatarImgId: number
+  backgroundImgId: number
+  backgroundUrl: string
+  authority: number
+  mutual: boolean
+  expertTags: unknown
+  experts: unknown
+  djStatus: number
+  vipType: number
+  remarkName: unknown
+  authenticationTypes: number
+  avatarDetail: AvatarDetail
+  avatarImgIdStr: string
+  backgroundImgIdStr: string
+  anchor: boolean
+}
+
+export interface AvatarDetail {
+  userType: number
+  identityLevel: number
+  identityIconUrl: string
+}
+
+export interface Subscriber {
+  defaultAvatar: boolean
+  province: number
+  authStatus: number
+  followed: boolean
+  avatarUrl: string
+  accountStatus: number
+  gender: number
+  city: number
+  birthday: number
+  userId: number
+  userType: number
+  nickname: string
+  signature: string
+  description: string
+  detailDescription: string
+  avatarImgId: number
+  backgroundImgId: number
+  backgroundUrl: string
+  authority: number
+  mutual: boolean
+  expertTags: unknown
+  experts: unknown
+  djStatus: number
+  vipType: number
+  remarkName: unknown
+  authenticationTypes: number
+  avatarDetail: unknown
+  avatarImgIdStr: string
+  backgroundImgIdStr: string
+  anchor: boolean
 }

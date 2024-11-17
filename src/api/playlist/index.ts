@@ -3,10 +3,10 @@ import {
   PlayListDetailInfo,
   PlayListTrackAll,
   PlayListDetails,
-  TagResult
+  TagResult,
+  TopPlaylistResult
 } from './type'
 
-// 获取歌单所有歌曲
 export const usePlayListTrackAll = async (
   id: number,
   limit?: number,
@@ -39,6 +39,7 @@ export const usePlaylistCat = async () => {
   const tagRes = await http.get<TagResult>(`playlist/hot`)
   return tagRes
 }
+
 export const useTopPlaylist = async ({
   order = 'hot',
   cat = '全部',
@@ -50,7 +51,7 @@ export const useTopPlaylist = async ({
   limit?: number
   offset?: number
 } = {}) => {
-  const { playlists } = await http.get<PlayListDetails>('/top/playlist', {
+  const { playlists } = await http.get<TopPlaylistResult>('/top/playlist', {
     order,
     cat,
     limit,
