@@ -1,6 +1,10 @@
 # React-Music-App
 Web-based spotify theme music application, implemented with Netease Music APIs
 Backend APIs: [Netease Cloud Music API](https://gitlab.com/Binaryify/neteasecloudmusicapi)
+
+## Demo
+[https://react-music-rose.vercel.app/home](https://react-music-rose.vercel.app/home)
+
 ## Tech Stack
 react + vite + react-router + zustand + tailwindcss + radix-ui + axios + react-query
 
