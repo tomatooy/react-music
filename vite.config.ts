@@ -19,7 +19,9 @@ export default defineConfig({
       '@': path.resolve(__dirname, './src')
     }
   },
-  optimizeDeps: {
-    include: ['aplayer'] // Add aplayer for pre-bundling
+  build: {
+    rollupOptions: {
+      //external: ['APlayer']
+    }
   }
 })

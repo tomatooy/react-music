@@ -1,6 +1,6 @@
 import { create } from 'zustand'
 import { audio } from '@/components/Aplayer/type'
-import APlayer from 'APlayer'
+import APlayer from 'aplayer'
 
 interface AplayerState {
   ap: APlayer | null

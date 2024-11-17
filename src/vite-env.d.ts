@@ -1,6 +1,6 @@
 /// <reference types="vite/client" />
 declare module 'react-slick'
-declare module 'APlayer' {
+declare module 'aplayer' {
   import { audio } from './components/Aplayer/type,'
   interface APlayerOptions {
     container: HTMLElement
