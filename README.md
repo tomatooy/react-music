@@ -16,6 +16,7 @@ react + vite + react-router + zustand + tailwindcss + radix-ui + axios + react-q
 - View user profile
 
 ## Screenshots
-![image](./public/screenshot/1.png)
-![image](./public/screenshot/2.png)
-![image](./public/screenshot/3.png)
+![image](./public/screenshot1.png)
+![image](./public/screenshot2.png)
+![image](./public/screenshot3.png)
+![image](./public/screenshot4.png)
