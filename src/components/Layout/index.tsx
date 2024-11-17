@@ -1,7 +1,7 @@
 import { Outlet, useLocation } from 'react-router-dom'
 import Nav from '@/components/Nav'
 import Sidebar from '@/components/Sidebar'
-// import Aplayer from '@/components/Aplayer'
+import Aplayer from '@/components/Aplayer'
 import { useEffect } from 'react'
 import { Toaster } from '@/components/ui/toaster'
 
@@ -22,7 +22,7 @@ const Layout: React.FC = () => {
           <Outlet />
           <Toaster />
         </div>
-        {/* <Aplayer /> */}
+        <Aplayer />
       </div>
     </div>
   )
