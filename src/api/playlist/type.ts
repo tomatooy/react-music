@@ -229,7 +229,7 @@ export interface PlayListDetails {
 }
 
 export interface PlayListDetailInfo {
-  playlist: PlayListDetail[]
+  playlist: PlayListDetail
 }
 
 export interface TagResult {

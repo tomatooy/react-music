@@ -20,13 +20,12 @@ export const usePlayListTrackAll = async (
   return songs
 }
 
-// 获取歌单详情
 export const usePlayListDetail = async (id: number, s: number = 8) => {
-  const { playlist } = await http.get<PlayListDetailInfo>('/playlist/detail', {
+  const playlists = await http.get<PlayListDetailInfo>('/playlist/detail', {
     id: id,
     s: s
   })
-  return playlist
+  return playlists
 }
 
 export const getCurrentUserPlaylist = async (uid: string) => {
