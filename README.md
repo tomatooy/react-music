@@ -7,7 +7,7 @@ react + vite + react-router + zustand + tailwindcss + radix-ui + axios + react-q
 ## Features
 - Login/ Register with Netease Music account(QR, Phone)
     - For safty purpose, only QR/Phone login is implemented
-- Play music (APlayer is configured, but most of the music are not avavilable due to copyright)
+- Play music (APlayer is configured, but some of the music are not avavilable due to copyright)
 - Search music, artist, playlist, album(hot search, suggest search)
 - Personalized recommendation(New Song, New Playlist, Toplist)
 - View artist, playlist, album details

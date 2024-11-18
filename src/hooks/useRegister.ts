@@ -22,8 +22,8 @@ export const useRegister = () => {
       (countryCode === '1' && phone.length !== 10)
     ) {
       toast({
-        title: '手机号格式错误',
-        description: '请输入正确的手机号'
+        title: 'Phone number format error',
+        description: 'Please enter the correct phone number'
       })
       return
     }
@@ -31,8 +31,8 @@ export const useRegister = () => {
       const exist = await useCheckExistingPhone(phone, countryCode)
       if (exist === 1) {
         toast({
-          title: '手机号已存在',
-          description: '请重新输入手机号'
+          title: 'Phone number already exists',
+          description: 'Please enter another phone number'
         })
         return
       } else {
@@ -43,12 +43,13 @@ export const useRegister = () => {
     const { data, message } = await useCaptchaSent(phone, countryCode)
     if (data) {
       toast({
-        title: '获取验证码',
-        description: '已发送验证码到手机请查收'
+        title: 'Get verification code',
+        description:
+          'Verification code has been sent to your phone, please check'
       })
     } else {
       toast({
-        title: '获取验证码',
+        title: 'Get verification code',
         description: message
       })
     }
@@ -58,8 +59,8 @@ export const useRegister = () => {
   const handleRegister = async () => {
     if (password !== rePassword) {
       toast({
-        title: '密码不一致',
-        description: '请重新输入密码'
+        title: 'Password mismatch',
+        description: 'Please enter the password again'
       })
       return
     }
@@ -72,12 +73,12 @@ export const useRegister = () => {
     )
     if (res.code === 200) {
       toast({
-        title: '注册成功',
-        description: '请登录'
+        title: 'Register success',
+        description: 'Please login'
       })
     } else {
       toast({
-        title: '注册失败',
+        title: 'Register failed',
         description: res.message
       })
     }
