@@ -85,21 +85,21 @@ export const useLogin = () => {
           localStorage.setItem('profile', JSON.stringify(profile))
           localStorage.setItem('cookie', cookie)
           toast({
-            title: '登录',
-            description: '授权登录成功'
+            title: 'Login',
+            description: 'Login success'
           })
           setIsModalOpen(false)
         }
       } catch {
         toast({
-          title: '登录',
-          description: '登录出错，请尝试二维码登录'
+          title: 'Login',
+          description: 'Login error, please try QR code login'
         })
       }
     } else {
       toast({
-        title: '登录',
-        description: '验证码错误'
+        title: 'Login',
+        description: 'Verification code error'
       })
     }
   }
@@ -116,8 +116,8 @@ export const useLogin = () => {
         const { code, cookie } = await useLoginQrCheck(unikey)
         if (code === 800) {
           toast({
-            title: '登录',
-            description: '二维码已过期，请重新获取'
+            title: 'Login',
+            description: 'QR code expired, please get again'
           })
           clearInterval(timer)
         }
@@ -128,8 +128,8 @@ export const useLogin = () => {
           localStorage.setItem('profile', JSON.stringify(profile))
           localStorage.setItem('cookie', cookie)
           toast({
-            title: '登录',
-            description: '授权登录成功'
+            title: 'Login',
+            description: 'Login success'
           })
           setIsModalOpen(false)
           clearInterval(timer)

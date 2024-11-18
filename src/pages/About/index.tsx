@@ -2,7 +2,6 @@ import {
   Card,
   CardContent,
   CardDescription,
-  CardFooter,
   CardHeader,
   CardTitle
 } from '@/components/ui/card'
@@ -10,59 +9,33 @@ import {
 const About: React.FC = () => {
   return (
     <>
-      <Card>
+      <Card className="w-fit">
         <CardHeader>
-          <CardTitle>Author</CardTitle>
+          <CardTitle>Devloped by</CardTitle>
           <CardDescription>tomatooy</CardDescription>
         </CardHeader>
         <CardContent>
-          <p>
-            An react musci application inspired by Netease Clould music and
-            spotiy. The website is fully depends on back-end APIs provided at
-            https://gitlab.com/Binaryify/neteasecloudmusicapi. The music player
-            is functional but most songs are not playable due to copyrights,
-            please use offical app for music player.
+          <p className="text-sm text-clip">
+            An react music application. The website is fully depends on back-end
+            APIs provided at{' '}
+            <a href="https://gitlab.com/Binaryify/neteasecloudmusicapi">
+              https://gitlab.com/Binaryify/neteasecloudmusicapi
+            </a>
+            . The music player is functional but most songs are not playable due
+            to copyrights, please use offical app for music.
+          </p>
+          <br />
+          <p className="text-sm text-clip">
+            inspired by{' '}
+            <a href="https://music.163.com/" className="underline">
+              Netease Cloud Music
+            </a>
+            ,{' '}
+            <a href="https://www.spotify.com/" className="underline">
+              Spotify
+            </a>
           </p>
         </CardContent>
-        <CardFooter>
-          <p>Card Footer</p>
-        </CardFooter>
-      </Card>
-      <Card>
-        <CardHeader>
-          <CardTitle>Card Title</CardTitle>
-          <CardDescription>Card Description</CardDescription>
-        </CardHeader>
-        <CardContent>
-          <p>Card Content</p>
-        </CardContent>
-        <CardFooter>
-          <p>Card Footer</p>
-        </CardFooter>
-      </Card>
-      <Card>
-        <CardHeader>
-          <CardTitle>Card Title</CardTitle>
-          <CardDescription>Card Description</CardDescription>
-        </CardHeader>
-        <CardContent>
-          <p>Card Content</p>
-        </CardContent>
-        <CardFooter>
-          <p>Card Footer</p>
-        </CardFooter>
-      </Card>
-      <Card>
-        <CardHeader>
-          <CardTitle>Card Title</CardTitle>
-          <CardDescription>Card Description</CardDescription>
-        </CardHeader>
-        <CardContent>
-          <p>Card Content</p>
-        </CardContent>
-        <CardFooter>
-          <p>Card Footer</p>
-        </CardFooter>
       </Card>
     </>
   )
