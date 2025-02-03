@@ -20,7 +20,7 @@ const Search: React.FC = () => {
   } = useSearch()
 
   return (
-    <div className="hidden md:flex items-center space-x-2 w-1/2 relative">
+    <div className="md:flex items-center space-x-2 w-1/2 relative">
       <form
         className="flex items-center flex-auto justify-between"
         onSubmit={(e) => {
@@ -58,12 +58,12 @@ const Search: React.FC = () => {
               Hot Search
             </h2>
             {!hotSearch && <>Loading...</>}
-            <div className="space-y-1">
+            <div className="space-y-1  md:w-[30vw]">
               {hotSearch &&
                 hotSearch.map((item, key) => {
                   return (
                     <Button
-                      className="w-full justify-start"
+                      className="block"
                       key={key}
                       variant="ghost"
                       onClick={() => handleOnClickHotSearch(item.first)}
